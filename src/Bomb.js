@@ -16,9 +16,10 @@ export default class Bomb extends Component {
   }
 
   render(){
+    const message = this.state.secondsLeft === 0 ? 'Boom!' : `${this.state.secondsLeft} seconds left before I go boom!`
     return(
       <div>
-        {this.state.secondsLeft} before I go boom!
+        {message}
       </div>
     )
   }
